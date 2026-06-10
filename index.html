@@ -9,67 +9,26 @@ body{
     font-family: Arial, sans-serif;
     color:white;
     /* Make the page fit phones */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+}
+<script>
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (Math.random()*20+15) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
 }
 
-/* Title */
-h1 {
-    font-size: 28px;
-    padding: 0 15px;
-}
-
-p {
-    font-size: 14px;
-    padding: 0 15px;
-}
-
-/* Photo container */
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* Photos */
-.gallery img {
-    width: 110px;      /* smaller size */
-    height: 170px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-/* Button */
-button {
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 25px;
-}
-
-/* For very small phones */
-@media (max-width: 600px) {
-
-    h1 {
-        font-size: 22px;
+setInterval(createHeart,300);
+</script>
     }
-
-    p {
-        font-size: 12px;
-    }
-
-    .gallery img {
-        width: 90px;
-        height: 140px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-}
 .container{
     padding:40px;
 }
@@ -94,7 +53,7 @@ button{
     font-size:22px;
 }
 .heart{
-    position:fixed;
+    position:float;
     color:red;
     animation: float 6s linear infinite;
 }
@@ -119,7 +78,7 @@ Thank you for being such an amazing person. ✨
 <img src="IMG-20260610-WA0004.jpg">
 <img src="IMG-20260610-WA0005.jpg">
 <br><br>
-<button onclick="showMessage()">Open My Heart ❤️</button>
+<button onclick="showMessage()">Open ❤️</button>
 <div id="message">
 🌹 You are one of the sweetest people I've ever met.
 No matter where life takes us, I hope your days are always filled with laughter, peace, and beautiful moments. ❤️✨
