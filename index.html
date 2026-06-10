@@ -8,6 +8,67 @@ body{
     text-align:center;
     font-family: Arial, sans-serif;
     color:white;
+    /* Make the page fit phones */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Title */
+h1 {
+    font-size: 28px;
+    padding: 0 15px;
+}
+
+p {
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+/* Photo container */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Photos */
+.gallery img {
+    width: 110px;      /* smaller size */
+    height: 170px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+/* For very small phones */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .gallery img {
+        width: 90px;
+        height: 140px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 }
 .container{
     padding:40px;
